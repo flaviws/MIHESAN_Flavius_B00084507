@@ -1,0 +1,144 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf460
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 -- phpMyAdmin SQL Dump\
+-- version 4.4.10\
+-- http://www.phpmyadmin.net\
+--\
+-- Host: localhost:8889\
+-- Generation Time: Apr 22, 2016 at 10:35 AM\
+-- Server version: 5.5.42\
+-- PHP Version: 7.0.0\
+\
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";\
+SET time_zone = "+00:00";\
+\
+--\
+-- Database: `flav_project`\
+--\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `Products`\
+--\
+\
+CREATE TABLE `Products` (\
+  `name` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,\
+  `price` int(11) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\
+\
+--\
+-- Dumping data for table `Products`\
+--\
+\
+INSERT INTO `Products` (`name`, `price`) VALUES\
+('iPhone 6S Plus - Screen Replacement', 350),\
+('iPhone 6S - Screen Replacement', 235);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `ProductsNoPrice`\
+--\
+\
+CREATE TABLE `ProductsNoPrice` (\
+  `name` varchar(50) NOT NULL,\
+  `price` varchar(50) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\
+\
+--\
+-- Dumping data for table `ProductsNoPrice`\
+--\
+\
+INSERT INTO `ProductsNoPrice` (`name`, `price`) VALUES\
+('iPhone 6S Plus - Screen Replacement', 'Login to see price'),\
+('iPhone 6S - Screen Replacement', 'Login to see price');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `Talk`\
+--\
+\
+CREATE TABLE `Talk` (\
+  `mess` varchar(500) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `Tester`\
+--\
+\
+CREATE TABLE `Tester` (\
+  `id` int(11) NOT NULL,\
+  `name` varchar(45) NOT NULL\
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;\
+\
+--\
+-- Dumping data for table `Tester`\
+--\
+\
+INSERT INTO `Tester` (`id`, `name`) VALUES\
+(1, 'TesterName');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `users`\
+--\
+\
+CREATE TABLE `users` (\
+  `id` int(11) NOT NULL,\
+  `username` varchar(250) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,\
+  `password` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL\
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;\
+\
+--\
+-- Dumping data for table `users`\
+--\
+\
+INSERT INTO `users` (`id`, `username`, `password`) VALUES\
+(1, 'flav', '$2y$10$RAw9Bf1lvG2wnrHKZo5bkeL/73cb8NEpPv4mNcDoUHZAr.Immq9.G'),\
+(4, 'greg', '$2y$10$QRGO.ojRRjmeqzzlZ4JRiOv0jhmIF1FqLtjg9.JwmazsLI7VMGLJS'),\
+(5, 'test', '$2y$10$1QikK.8wqVkoFaloSGqJ5u3BbWIRzGRYdM7M6JdtF3R42Z6VuN62C'),\
+(6, 'anto', '$2y$10$dhTbavpF6Rpcs8gnNpDzlO0q4gDkXXV.a3ZTnaIHWba7lXvaHy8rC'),\
+(7, 'testmessage', '$2y$10$Nw/f3aXB4nxRjMla1TdK2evMdk20tV3U0kCU.68Ftxgxp/nG9b59.'),\
+(8, 'testero', '$2y$10$TxX7pae8gU1Uira96629Zek4vO3XqpzbsN2Mw2.E2GnGGAW2PWEfq'),\
+(9, 'flavo', '$2y$10$9KFw/SFeBbpnWBUzLomWuOtcGBXIZuK3Ypy70KG.hO0uqBT4aVEyK'),\
+(10, 'paul', '$2y$10$wBaeFv09MkGVZB3Tn8CrMO01zNJqA7QZdSKBUCYiUwvhEGMuOFCNS');\
+\
+--\
+-- Indexes for dumped tables\
+--\
+\
+--\
+-- Indexes for table `Tester`\
+--\
+ALTER TABLE `Tester`\
+  ADD PRIMARY KEY (`id`);\
+\
+--\
+-- Indexes for table `users`\
+--\
+ALTER TABLE `users`\
+  ADD PRIMARY KEY (`id`);\
+\
+--\
+-- AUTO_INCREMENT for dumped tables\
+--\
+\
+--\
+-- AUTO_INCREMENT for table `Tester`\
+--\
+ALTER TABLE `Tester`\
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;\
+--\
+-- AUTO_INCREMENT for table `users`\
+--\
+ALTER TABLE `users`\
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;}
